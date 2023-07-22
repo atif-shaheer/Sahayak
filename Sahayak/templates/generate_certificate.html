@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Certificate</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .outer-border{
+            width:600px; height:445px; padding:20px; text-align:center; border: 10px solid #673AB7;
+        }
+
+        .inner-dotted-border{
+            width:536px; height:387px; padding:20px; text-align:center; border: 5px solid #673AB7;border-style: dotted;
+        }
+
+        .certification{
+            font-size:34px; font-weight:bold;    color: #663ab7;
+        }
+
+        .certify{
+            font-size:25px;
+        }
+
+        .name{
+            font-size:30px;    color: green;
+        }
+
+        .fs-30{
+            font-size:30px;
+        }
+
+        .fs-20{
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container mt-5">
+                <h1 class="mb-4">Generate Certificate</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="recipient_name">Recipient Name:</label>
+                        <input type="text" class="form-control" name="recipient_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course_name">Course Name:</label>
+                        <input type="text" class="form-control" name="course_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="completion_date">Completion Date:</label>
+                        <input type="date" class="form-control" name="completion_date" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Generate Certificate</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery links (required for some Bootstrap features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify Certificate</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h3>Verify Certificate</h3>
+        <p>Enter the JWT token to verify the certificate with ID: {{ certificate_id }}</p>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="jwt_token">JWT Token:</label>
+                <input type="text" class="form-control" id="jwt_token" name="jwt_token" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Verify Certificate</button>
+        </form>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery links (required for some Bootstrap features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
